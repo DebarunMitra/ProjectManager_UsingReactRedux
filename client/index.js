@@ -17,7 +17,8 @@ function buyCandy () {
 
 function buyIceCream () {
   return {
-    type: BUY_ICECREAM
+    type: BUY_ICECREAM,
+    info: 'Second redux action'
   }
 }
 
@@ -74,7 +75,9 @@ const rootReducer = combineReducers({
 })
 const store = createStore(rootReducer, applyMiddleware(logger))
 console.log('Initial State ', store.getState())
-const unsubscribe = store.subscribe(() => { })
+const unsubscribe = store.subscribe(() => {
+  //console.log(`Updated State: `${store.getState()}); //logger will do the same in more details
+})
 store.dispatch(buyCandy())
 store.dispatch(buyCandy())
 store.dispatch(buyCandy())
