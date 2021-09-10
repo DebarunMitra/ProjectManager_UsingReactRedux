@@ -1,19 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {BrowserRouter} from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import CandyContainer from './components/layout/CandyContainer';
 
-class App extends Component {
-  render(){
+const App = () => {
     return (
-      <BrowserRouter>
-         <div>
-            <Navbar />
-            <CandyContainer />
-         </div>
-      </BrowserRouter>
+        <BrowserRouter>
+           <div>
+              <Navbar />
+              <CandyContainer />
+           </div>
+        </BrowserRouter>
    );
-  }
-}
+};
 
 export default App;
