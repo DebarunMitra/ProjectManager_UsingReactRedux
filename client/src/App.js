@@ -3,6 +3,8 @@ import {BrowserRouter} from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import CandyContainer from './components/layout/CandyContainer';
 import HookCandyContainer from './components/layout/HookCnadyContainer';
+import CookieConainer from './components/layout/CookieContainer';
+
 
 
 const App = () => {
@@ -11,7 +13,10 @@ const App = () => {
            <div>
               <Navbar />
               <CandyContainer />
-              <HookCandyContainer />
+              {
+                // <HookCandyContainer />
+              }
+              <CookieConainer />
            </div>
         </BrowserRouter>
    );
