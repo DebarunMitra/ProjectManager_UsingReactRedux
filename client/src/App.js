@@ -6,6 +6,7 @@ import HookCandyContainer from './components/layout/HookCnadyContainer';
 import CookieConainer from './components/layout/CookieContainer';
 import TakeCookiesNumbersToBuy from './components/layout/TakeCookiesNumbersToBuy';
 import OwnPorpsConcept from './components/layout/OwnPorpsConcept';
+import CustomerContainer from './components/layout/CustomerContainer';
 
 
 
@@ -14,14 +15,15 @@ const App = () => {
         <BrowserRouter>
            <div>
               <Navbar />
-              <CandyContainer />
               {
-                // <HookCandyContainer />
+                // <CandyContainer />
+                // // <HookCandyContainer />
+                // <CookieConainer />
+                // <TakeCookiesNumbersToBuy />
+                // <OwnPorpsConcept candy />
+                // <OwnPorpsConcept />
               }
-              <CookieConainer />
-              <TakeCookiesNumbersToBuy />
-              <OwnPorpsConcept candy />
-              <OwnPorpsConcept />
+              <CustomerContainer />
            </div>
         </BrowserRouter>
    );
