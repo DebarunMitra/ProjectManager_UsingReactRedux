@@ -10,11 +10,11 @@ const CustomerContainer = ({customerData,fetchUser}) => {
 
     return (
       <div>
-        <h6>Customers <span role="img" aria-label="customers">👥👥👥👥👥</span></h6>
+        <h3>Customers <span role="img" aria-label="customers">👥👥👥👥👥</span></h3>
         {
           customerData.loading?(<p>loading data ...</p>) :
           customerData.error!==''?(<p>{customerData.error}</p>):
-          (customerData && customerData.customers && customerData.customers.map(customer=><p key={customer.id}>{customer.name}</p>))
+          (customerData && customerData.customers && customerData.customers.map(customer=><p key={customer.id}><b>{customer.name}</b></p>))
         }
       </div>
     );
