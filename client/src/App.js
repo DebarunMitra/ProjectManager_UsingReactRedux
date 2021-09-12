@@ -5,6 +5,7 @@ import CandyContainer from './components/layout/CandyContainer';
 import HookCandyContainer from './components/layout/HookCnadyContainer';
 import CookieConainer from './components/layout/CookieContainer';
 import TakeCookiesNumbersToBuy from './components/layout/TakeCookiesNumbersToBuy';
+import OwnPorpsConcept from './components/layout/OwnPorpsConcept';
 
 
 
@@ -19,6 +20,8 @@ const App = () => {
               }
               <CookieConainer />
               <TakeCookiesNumbersToBuy />
+              <OwnPorpsConcept candy />
+              <OwnPorpsConcept />
            </div>
         </BrowserRouter>
    );
