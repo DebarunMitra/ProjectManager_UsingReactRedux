@@ -1,11 +1,12 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
+import {buyCookie, buyCandy} from '../../redux'
 
 const OwnPropsConcept = props => {
     return (
       <div>
-        <h6>Available {props.name} - {props.item}</h6>
+        <p>Available {props.name} - {props.item}</p>
+        <button name={props.name} onClick={()=>props.buyItem()}>Buy {props.name}</button>
       </div>
     )
 }
@@ -21,4 +22,12 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps)(OwnPropsConcept)
+const mapDispatchToProps = (dispatch, ownProps) => {
+  const dynamicDispatchFunction = ownProps.candy ? () => dispatch(buyCandy()) : () => dispatch(buyCookie())
+
+  return {
+    buyItem: dynamicDispatchFunction
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(OwnPropsConcept)
