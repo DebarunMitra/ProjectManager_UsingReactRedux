@@ -4,6 +4,7 @@ import Navbar from './components/layout/Navbar';
 import CandyContainer from './components/layout/CandyContainer';
 import HookCandyContainer from './components/layout/HookCnadyContainer';
 import CookieConainer from './components/layout/CookieContainer';
+import TakeCookiesNumbersToBuy from './components/layout/TakeCookiesNumbersToBuy';
 
 
 
@@ -17,6 +18,7 @@ const App = () => {
                 // <HookCandyContainer />
               }
               <CookieConainer />
+              <TakeCookiesNumbersToBuy />
            </div>
         </BrowserRouter>
    );
